@@ -1,5 +1,5 @@
-const express = require('express'); //importing 3rd party module
-const app = express() //invoking express
+// const express = require('express'); //importing 3rd party module
+// const app = express() //invoking express
 
 var data  = ['C','C++','Python','JavaScript'];    
 
