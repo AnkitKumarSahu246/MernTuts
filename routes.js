@@ -12,10 +12,6 @@ module.exports = (app)=>{
     });
     
     app.get('/about',(req,res)=>{
-        res.send("This is an about page.");
-    });
-
-    app.get('/profile/:id',(req,res)=>{
-        res.send("you requested user no "+ req.params.id);
+        res.render('about');
     });
 }
