@@ -1,2 +1,8 @@
-const getSum = require('./test');
-console.log(getSum.multiply(2,3));
+const http = require('http');
+
+http.createServer((req,res)=>{
+    res.write("Hello World");
+    res.end();
+}).listen(3000);
+
+console.log('Server is running');
