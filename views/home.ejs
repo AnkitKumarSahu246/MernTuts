@@ -8,9 +8,15 @@
 <body>
     <%- include('partials/nav'); %>
     <h1>This is a home page</h1>
-    <h2>
-        <%= datas.name %>
-        <%= datas.status %>
-    </h2>
+    <form id = "myForm">
+        <input type="text" name = "langs" placeholder="language">
+        <button class="btn waves-effect waves-light" type = "submit">add lang</button>
+    </form>
+    <ul>
+        <% datas.forEach((lang)=>{ %>
+            <li onclick = deleteme(this)> <%= lang %> </li>    
+        <% }); %>
+    </ul>
+    <script src = "/script.js"></script>
 </body>
 </html>
