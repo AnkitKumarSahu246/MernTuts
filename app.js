@@ -1,8 +1,14 @@
-const http = require('http');
+const express = require('express'); //importing 3rd party module
+const app = express() //invoking express
+const port = 5000;
 
-http.createServer((req,res)=>{
-    res.write("Hello World");
-    res.end();
-}).listen(3000);
+//Serving static files
+app.use(express.static('public'));
 
-console.log('Server is running');
+//Setting view engine
+app.set('view engine','ejs');
+//import routes
+const routes = require('./routes')(app);
+app.listen(port,()=>{
+    console.log('Server is running on port '+port);
+});
